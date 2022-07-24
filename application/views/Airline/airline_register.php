@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width= device-width, initial-scale=1">
 <title>Airline registration</title>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>Assets/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>Assets/bootstrap/css/bootstrap-ltr.css">
@@ -35,12 +36,12 @@
                 <div class="body" style="background-color:#f8c37d; height:600px;">
 					<div class="col-lg-6 col-md-5 col-sm-4 col-xs-12 left">
                          
-                        <img src="<?php echo base_url()?>Assets/image/login_bg.jpg" style="width: 1480px ; height: 580px; position: relative; ">
+                        <img src="<?php echo base_url()?>Assets/image/login_bg.jpg" style="width: 1490px ; height: 580px; position: relative; ">
                     </div>
                     <?php
                         echo form_open_multipart('Airline/Register');
                     ?>
-                    <div class="col-lg-6 col-md-7 col-sm-8 col-xs-12 right">
+                    <div class="col-lg-6 col-md-7 col-sm-8 col-xs-12 left">
                         <div id="result_box">
                             <div class="result"><p></p></div>
                         </div>
@@ -69,8 +70,6 @@
                         <label>Company code: <?php echo form_error('airline_companyCode') ?></label>
                         <input type="text" name="airline_companyCode" id="fax">
                     </div>
-                    
-                    
                     <div class="form_row">
                         <label>Company logo:<?php echo form_error('pic') ?></label>
                         <input type="file" name="pic">
@@ -96,6 +95,6 @@
 <script src="<?php echo base_url() ?>Assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="<?php echo base_url() ?>Assets/js/jquery.slimscroll.js"></script>
 <script src="<?php echo base_url() ?>Assets/js/js.js"></script>
-<script src="<?php echo base_url() ?>Connector/Send/Contact/index.js"></script>
+<!-- <script src="<?php echo base_url() ?>Connector/Send/Contact/index.js"></script> -->
 </body>
 </html>

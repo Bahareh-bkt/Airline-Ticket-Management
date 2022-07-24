@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>Assets/bootstrap/css/bootstrap-ltr.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>Assets/css/css.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>Assets/css/responsive.css">
-<!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>Assets/font-awesome-4.7.0/css/font-awesome.min.css"> -->
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>Assets/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <div class="container" style="background-color: #ffffff">
@@ -34,7 +34,7 @@
                 </div>
                 <div class="body" style="background-color:#f8c37d; height:600px;">
 					<div class="col-lg-6 col-md-5 col-sm-4 col-xs-12 left">
-                    	<img src="<?php echo base_url()?>Assets/image/login_bg.jpg" style="width: 1480px ; height: 580px; position: relative; ">
+                    	<img src="<?php echo base_url()?>Assets/image/login_bg.jpg" style="width: 1500px ; height: 580px; position: relative; ">
                     </div>
                     <?php
                     if(isset($data_result)){
@@ -50,7 +50,7 @@
                     }
                         echo form_open_multipart('Airline/Update');
                     ?>
-                    <div class="col-lg-6 col-md-7 col-sm-8 col-xs-12 right">
+                    <div class="col-lg-6 col-md-7 col-sm-8 col-xs-12 left">
                         <div id="result_box">
                             <div class="result"><p></p></div>
                         </div>

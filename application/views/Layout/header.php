@@ -12,9 +12,11 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 left">
             <ul>
-                <li><img style="width:50px; height:50px; border-radius:50%" src="<?php echo base_url().'Assets/Admin_Pic/'.$this->session->userdata('admin_session_pic') ?>"></li>
+                <li><img style="width:50px; height:50px; border-radius:50%" 
+                src="<?php echo base_url().'Assets/Admin_Pic/'.$this->session->userdata('admin_session_pic') ?>"></li>
                 <li id="clock1" style="color:#ffffff"> </li>
-                <li style="color:#ffffff"> <div class="box_info"><p>Hello <?php echo $this->session->userdata('admin_session_fname');?> , Wellcome Back !</p></div></li>
+                <li style="color:#ffffff"> <div class="box_info">
+                <p>Hello <?php echo $this->session->userdata('admin_session_fname');?> , Wellcome Back !</p></div></li>
             </ul>
         </div>
         

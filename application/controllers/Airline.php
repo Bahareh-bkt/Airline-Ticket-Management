@@ -67,7 +67,7 @@ class Airline extends CI_Controller {
         if($this->form_validation->run()==false){
             $this->load->view('Airline/airline_register');
         }else{
-            $config['upload_path'] = "uploads/";
+            $config['upload_path'] = "Assets/uploads/";
             $config['allowed_types'] = 'gif|jpg|png';
             $config['max_size'] = 10000;
             $config['max_width'] = 2024;

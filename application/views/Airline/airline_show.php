@@ -61,8 +61,10 @@
                                               <td> '.$row->airline_companyCode.' </td>
                                               <td><img src='.base_url().'Assets/uploads/'.$row->airline_logo.' style="width: 50px;height: 50px"></td>
                                                <td id="action_data">
-                                                   <a href="#" data-action="delete" data-code="'.$row->airline_companyCode.'" >  <i class="fa fa-trash"></i> </a>
-                                                   <a href="#" data-action="edit" data-code="'.$row->airline_companyCode.'" > <i class="fa fa-edit"></i> </a>
+                                                   <a href="#" data-action="delete" data-code="'.$row->airline_companyCode.'" >  
+                                                   <i class="fa fa-trash"></i></a>
+                                                   <a href="#" data-action="edit" data-code="'.$row->airline_companyCode.'" > 
+                                                   <i class="fa fa-edit"></i></a>
                                                </td>
                                           </tr>
                                         ';

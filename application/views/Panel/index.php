@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width= device-width, initial-scale=1">
 <title>Airline Ticket Management System</title>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>Assets/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>Assets/bootstrap/css/bootstrap-ltr.css">
@@ -15,15 +16,15 @@
         <?php
         $this->load->view('Layout/header');
         ?>
-        <div class="row" dir="ltr">
+        <div class="row" >
         	<div class="main-form" style="height:600px;" dir="ltr">
-            	<div class="top" style="background-color:#f8c37d" dir="ltr">
+            	<div class="top" style="background-color:#f8c37d" >
                 	<ul>
                     	<li><p>Main Panel</p><i class='fa fa-crosshairs'></i></li>
                         <li></li>
                     </ul>	
                 </div>
-                <div class="body" style="background-color:#f8c37d;height:600px" dir="ltr">
+                <div class="body" style="background-color:#f8c37d;height:600px; padding-left: 70px; padding-top: 100px;" dir="ltr">
                       	<ul>
 
                          <li>
