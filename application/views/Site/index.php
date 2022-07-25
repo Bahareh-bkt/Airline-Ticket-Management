@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Main Page</title>
+  <title>Home</title>
 <!--
 Holiday Template
 http://www.templatemo.com/tm-475-holiday
@@ -21,7 +21,7 @@ http://www.templatemo.com/tm-475-holiday
   		<div class="container">
   			<div class="row">
   				<div class="col-lg-6 col-md-4 col-sm-3 tm-site-name-container">
-  					<a href="<?php echo base_url().'Site/index' ?>" class="tm-site-name">Bahar Reservation</a>
+  					<a href="<?php echo base_url().'Site/index' ?>" class="tm-site-name">Ticket Reservation</a>
   				</div>
 	  			<div class="col-lg-6 col-md-8 col-sm-9">
 	  				<div class="mobile-menu-icon">
@@ -30,7 +30,6 @@ http://www.templatemo.com/tm-475-holiday
 	  				<nav class="tm-nav">
 						<ul>
 							<li><a href="<?php echo base_url().'index.php/Site/index' ?>" class="active">Main Page</a></li>
-							
 							<li><a href="<?php echo base_url().'index.php/Site/contactus' ?>">Contact us</a></li>
 							<li><a href="<?php echo base_url().'index.php/Site/aboutus' ?>">About us</a></li>
 							<li><a href="<?php echo base_url().'index.php/Site/searchTicket' ?>">Search</a></li>

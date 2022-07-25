@@ -20,8 +20,8 @@
         	<div class="main-form" style="height:550px;">
             	<div class="top" style="background-color:#f8c37d">
                 	<ul>
-                    	<li><p>Airlines</p><i class='fa fa-users'></i></li>
-                        <li></li>
+                    	<li><i class='fa fa-users'></i><p>Airlines</p></li>
+                        <li><a href="<?php echo base_url().'index.php/Home/index' ?>">back</a></li>
                     </ul>	
                 </div>
                 <div class="body show_table" style="background-color:#f8c37d">

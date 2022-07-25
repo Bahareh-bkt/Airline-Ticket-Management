@@ -19,7 +19,7 @@
         	<div class="main-form" style="height:550px;">
             	<div class="top" style="background-color:#f8c37d">
                 	<ul>
-                        <li><p>Edit the Airlines</p><i class='fa fa-plus'></i></li>
+                        <li><i class='fa fa-plus'></i><p>Edit the Airlines</p></li>
                         <li></li>
                         <li style="color: #97310e">
                             <?php
@@ -28,7 +28,7 @@
                             }
                             ?>
                         </li>
-                    	
+                    	<li><a href="<?php echo base_url().'index.php/Home/index' ?>">back</a></li>
                        
                     </ul>	
                 </div>

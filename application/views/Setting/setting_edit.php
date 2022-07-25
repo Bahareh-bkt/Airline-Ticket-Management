@@ -19,8 +19,8 @@
         	<div class="main-form" style="height:300px;background-color:#f8c37d">
             	<div class="top" style="background-color:#f8c37d">
                 	<ul>
-                        <li><p> Setting: Edit password</p><i class='fa fa-plus'></i></li>
-                        <li></li>
+                        <li><i class='fa fa-plus'></i><p> Edit password</p></li>
+                        
                         <li style="color: #97310e">
                             <?php
                             if(isset($result_change_pass)){
@@ -32,9 +32,7 @@
                     </ul>	
                 </div>
                 <div class="body">
-					 <!-- <div class="col-lg-6 col-md-5 col-sm-4 col-xs-12 left">
-                    	<img src="<?php echo base_url()?>Assets/image/login_bg.jpg" style="width: 560px ; height: 400px; position: relative; left: 170px;">
-                    </div> --> 
+					  
                     <?php
                         $fname=$this->session->userdata('admin_session_fname');
                         $lname=$this->session->userdata('admin_session_lname');
@@ -42,7 +40,7 @@
                         $pic=$this->session->userdata('admin_session_pic');
                         echo form_open_multipart('Setting/Change_Pass');
                     ?>
-                    <div class="col-lg-6 col-md-7 col-sm-8 col-xs-12 right">
+                    <div class="col-lg-6 col-md-7 col-sm-8 col-xs-12 left">
                         <div id="result_box">
                             <div class="result"><p></p></div>
                         </div>
@@ -77,7 +75,7 @@
             <div class="main-form" style="margin-top: -30px; background-color:#f8c37d">
                 <div class="top" style="background-color:#f8c37d">
                     <ul>
-                        <li><p> Setting: Edit personal information</p><i class='fa fa-plus'></i></li>
+                        <li><i class='fa fa-plus'></i><p>Edit personal information</p></li>
                         <li>
                             <?php
                             if(isset($register_result)){
@@ -92,7 +90,7 @@
                     <?php
                     echo form_open_multipart('Setting/Change_Profile');
                     ?>
-                    <div class="col-lg-6 col-md-7 col-sm-8 col-xs-12 right">
+                    <div class="col-lg-6 col-md-7 col-sm-8 col-xs-12 left">
                         <div id="result_box">
                             <div class="result"><p></p></div>
                         </div>
@@ -132,6 +130,6 @@
 <script src="<?php echo base_url() ?>Assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="<?php echo base_url() ?>Assets/js/jquery.slimscroll.js"></script>
 <script src="<?php echo base_url() ?>Assets/js/js.js"></script>
-<script src="<?php echo base_url() ?>Connector/Send/Contact/index.js"></script>
+<!-- <script src="<?php echo base_url() ?>Connector/Send/Contact/index.js"></script> -->
 </body>
 </html>

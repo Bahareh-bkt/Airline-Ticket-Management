@@ -20,8 +20,8 @@
         	<div class="main-form" style="height:800px;background-color:#f8c37d">
             	<div class="top" style="background-color:#f8c37d">
                 	<ul>
-                        <li><p>Show Flights</p><i class='fa fa-users'></i></li>
-                        <li></li>
+                        <li><i class='fa fa-users'></i><p>Show Flights</p></li>
+                        
                         <li style="color: #97310e">
                             <?php
                             if(isset($register_result)){
@@ -29,7 +29,7 @@
                             }
                             ?>
                         </li>
-                    	
+                    	<li><a href="<?php echo base_url().'index.php/Home/index' ?>">back</a></li>
                     </ul>	
                 </div>
                 <div class="body show_table" style="background-color:#f8c37d">
@@ -76,24 +76,31 @@
                                               <td id="action_change" style="cursor: pointer">
                                               ';
                                                 if($row->Flight_state==0){
-                                                    echo'<div data-action="change" data-code="'.$row->Flight_code.'" data-state="'.$row->Flight_state.'"   class="Flight_state" id="Flight_state" style="background-color: #ff6c00 ;padding: 9px 1px; box-shadow: 0px 0px 3px #17b2ff ;border: 0px solid ">
+                                                    echo'<div data-action="change" data-code="'.$row->Flight_code.'" data-state="'.$row->Flight_state.'"   
+                                                    class="Flight_state" id="Flight_state" style="background-color: #ff6c00 ;padding: 9px 1px; box-shadow: 0px 0px 3px #17b2ff ;border: 0px solid ">
                                                         <p>The capacity is not filled</p>
                                                         </div>
 ';
                                                 }elseif ($row->Flight_state==1){
-                                                    echo'                                              <div data-action="change" data-code="'.$row->Flight_code.'" data-state="'.$row->Flight_state.'" class="Flight_state" id="Flight_state" style="background-color: #ff6c00 ;padding: 9px 1px; box-shadow: 0px 0px 3px #17b2ff ;border: 0px solid ">
-                                              <p>Capacity filled</p>
-                                              </div>
+                                                    echo' 
+                                                    <div data-action="change" data-code="'.$row->Flight_code.'" data-state="'.$row->Flight_state.'" 
+                                                    class="Flight_state" id="Flight_state" style="background-color: #ff6c00 ;padding: 9px 1px; box-shadow: 0px 0px 3px #17b2ff ;border: 0px solid ">
+                                                    <p>Capacity filled</p>
+                                                    </div>
 ';
                                                 }elseif ($row->Flight_state==2){
-                                                    echo'                                              <div data-action="change" data-code="'.$row->Flight_code.'" data-state="'.$row->Flight_state.'" class="Flight_state" id="Flight_state" style="background-color: #ff6c00 ;padding: 9px 1px; box-shadow: 0px 0px 3px #17b2ff ;border: 0px solid ">
-                                              <p>flight done</p>
-                                              </div>
+                                                    echo'                                              
+                                                    <div data-action="change" data-code="'.$row->Flight_code.'" data-state="'.$row->Flight_state.'" 
+                                                    class="Flight_state" id="Flight_state" style="background-color: #ff6c00 ;padding: 9px 1px; box-shadow: 0px 0px 3px #17b2ff ;border: 0px solid ">
+                                                    <p>flight done</p>
+                                                    </div>
 ';
                                                 }else{
-                                                    echo'<div data-action="change" data-code="'.$row->Flight_code.'" data-state="'.$row->Flight_state.'" class="Flight_state" id="Flight_state" style="background-color: #ff6c00 ;padding: 9px 1px; box-shadow: 0px 0px 3px #17b2ff ;border: 0px solid ">
-                                                          <p>The flight did not take place</p>
-                                                          </div>
+                                                    echo'
+                                                    <div data-action="change" data-code="'.$row->Flight_code.'" data-state="'.$row->Flight_state.'" 
+                                                    class="Flight_state" id="Flight_state" style="background-color: #ff6c00 ;padding: 9px 1px; box-shadow: 0px 0px 3px #17b2ff ;border: 0px solid ">
+                                                    <p>The flight did not take place</p>
+                                                    </div>
             ';
                                                             }
                                                             echo'

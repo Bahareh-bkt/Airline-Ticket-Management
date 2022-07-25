@@ -16,10 +16,10 @@
         $this->load->view('Layout/header');
         ?>
         <div class="row">
-        	<div class="main-form" style="height:600px;">
+        	<div class="main-form" style="height:550px;">
             	<div class="top" style="background-color:#f8c37d">
                 	<ul>
-                        <li><p>Edit the Airplane</p><i class='fa fa-plus'></i></li>
+                        <li><i class='fa fa-plus'></i><p>Edit the Airplane</p></li>
                         <li></li>
                         <li style="color: #97310e">
                             <?php
@@ -28,13 +28,13 @@
                             }
                             ?>
                         </li>
-                    	
+                    	<li><a href="<?php echo base_url().'index.php/Airplane/Show_Airplane' ?>">back</a></li>
                         
                     </ul>	
                 </div>
-                <div class="body" style="background-color:#f8c37d; height:550px">
+                <div class="body" style="background-color:#f8c37d; height:600px">
 					<div class="col-lg-6 col-md-5 col-sm-4 col-xs-12 left">
-                    	<img src="<?php echo base_url()?>Assets/image/login_bg.jpg" style="width: 1420px ; height: 550px; position: relative; ">
+                    	<img src="<?php echo base_url()?>Assets/image/login_bg.jpg" style="width: 1500px ; height: 580px; position: relative; ">
                     </div>
                     <?php
                     $CI=&get_instance();
@@ -50,7 +50,7 @@
                     }
                         echo form_open('Airplane/Update');
                     ?>
-                    <div class="col-lg-6 col-md-7 col-sm-8 col-xs-12 right">
+                    <div class="col-lg-6 col-md-7 col-sm-8 col-xs-12 left">
                         <div id="result_box">
                             <div class="result"><p></p></div>
                         </div>
@@ -58,6 +58,7 @@
                         <div class="form_row">
                             <label>Name of the airline:</label>
                             <select name="Airplane_airlineName" id="Airplane_airlineName">
+                            <option value="<?=$data['Airplane_airlineName']?>"><?=$data['Airplane_airlineName']?></option>
                                 <?php
                                 foreach ($data['get_all']->result() as $row) {
                                     echo'

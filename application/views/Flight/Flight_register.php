@@ -19,7 +19,7 @@
         	<div class="main-form" style="height:550px;">
             	<div class="top" style="background-color:#f8c37d">
                 	<ul>
-                        <li><p >Flight Registration</p><i class='fa fa-plus'></i></li>
+                        <li><i class='fa fa-plus'></i><p>Flight Registration</p></li>
                         <li></li>
                         <li style="color: #97310e">
                             <?php
@@ -27,21 +27,21 @@
                                 echo '<p>'.$register_result.'</p>';
                             }
                             ?>
-
+                        <li><a href="<?php echo base_url().'index.php/Home/index' ?>">back</a></li>
                         </li>
                     	
                     </ul>	
                 </div>
                 <div class="body" dir="ltr" style="background-color:#f8c37d; height:600px;">
 					 <div class="col-lg-6 col-md-5 col-sm-4 col-xs-12 left" dir="ltr">
-                    	<img src="<?php echo base_url()?>Assets/image/login_bg.jpg" style="width: 1480px ; height: 580px; position: relative; ">
+                    	<img src="<?php echo base_url()?>Assets/image/login_bg.jpg" style="width: 1500px ; height: 580px; position: relative; ">
                     </div> 
                     <?php
                     $CI=&get_instance();
                     $data=$CI->Get_All_Airlines();
                     echo form_open_multipart('Flight/Register');
                     ?>
-                    <div class="col-lg-6 col-md-7 col-sm-8 col-xs-12 right" >
+                    <div class="col-lg-6 col-md-7 col-sm-8 col-xs-12 left" >
                         <div id="result_box">
                             <div class="result"><p></p></div>
                         </div>
@@ -129,7 +129,7 @@
             </div>
         </div>
         <div class="row" dir="ltr">
-        	<div class="col-lg-12 bottom navbar-fixed-bottom" dir="ltr" style="background-color:#ff6c00"">
+        	<div class="col-lg-12 bottom navbar-fixed-bottom" dir="ltr" style="background-color:#ff6c00">
                 <p style="color:#ffffff; float: left;">Airplane ticket management and reservation project | All rights reserved for Bahareh Bakhtiari</p>
             </div>
         </div>

@@ -20,7 +20,7 @@ $CI=&get_instance();
   		<div class="container">
   			<div class="row">
   				<div class="col-lg-6 col-md-4 col-sm-3 tm-site-name-container">
-                    <a href="<?php echo base_url().'Site/index' ?>" class="tm-site-name">Bahar Reservation</a>
+                    <a href="<?php echo base_url().'Site/index' ?>" class="tm-site-name">Ticket Reservation</a>
   				</div>
 	  			<div class="col-lg-6 col-md-8 col-sm-9">
 	  				<div class="mobile-menu-icon">
@@ -29,7 +29,6 @@ $CI=&get_instance();
                     <nav class="tm-nav">
                         <ul>
                         	<li><a href="<?php echo base_url().'index.php/Site/index' ?>" >Main Page</a></li>
-                        	
                         	<li><a href="<?php echo base_url().'index.php/Site/contactus' ?>">Contact us</a></li>
                         	 <li><a href="<?php echo base_url().'index.php/Site/aboutus' ?>">About us</a></li>
                             <li><a href="<?php echo base_url().'index.php/Site/searchTicket' ?>">Search</a></li>
@@ -114,6 +113,12 @@ $CI=&get_instance();
                                     <option value="2"> 2 </option>
                                     <option value="3"> 3 </option>
                                     <option value="4"> 4 </option>
+									<option value="5"> 5 </option>
+									<option value="6"> 6 </option>
+									<option value="7"> 7 </option>
+									<option value="8"> 8 </option>
+									<option value="9"> 9 </option>
+									<option value="10"> 10 </option>
                                 </select>
                                 
                             </li>

@@ -20,7 +20,7 @@
         	<div class="main-form" style="height:550px;">
             	<div class="top" style="background-color:#f8c37d">
                 	<ul>
-                        <li><p>Airline registration</p><i class='fa fa-plus'></i></li>
+                        <li><i class='fa fa-plus'></i><p>Airline registration</p></li>
                         <li></li>
                         <li style="color: #97310e">
                             <?php
@@ -30,7 +30,7 @@
                             }
                             ?>
                         </li>
-                    	
+                    	<li><a href="<?php echo base_url().'index.php/Home/index' ?>">back</a></li>
                     </ul>	
                 </div>
                 <div class="body" style="background-color:#f8c37d; height:600px;">

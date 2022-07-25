@@ -60,7 +60,8 @@ class Setting extends CI_Controller {
                             'admin_session_pass'=>$_POST['admin_pass'],
                         );
                         $this->session->set_userdata($admin_session);
-                        $data['result_change_pass']=" Your information has been edited successfully, please log out of the panel and log in again";
+                        $data['result_change_pass']=" Your information has been edited successfully,
+                         please log out of the panel and log in again";
                         $this->load->view('Setting/setting_edit',$data);
                     }else{
                         $data['result_change_pass']=" Your information was not edited";
@@ -116,7 +117,7 @@ class Setting extends CI_Controller {
                 $data['admin_lname']=$_POST['admin_lname'];
                 $retrieve=$this->Setting_Model->Update_Profile($data);
                 if($retrieve){
-                    unlink('Admin_Pic/'.$this->session->userdata('admin_session_pic'));
+                    unlink('Assets/Admin_Pic/'.$this->session->userdata('admin_session_pic'));
                     $admin_session=array(
                         'admin_session_fname'=>$_POST['admin_fname'],
                         'admin_session_lname'=>$_POST['admin_lname'],
