@@ -67,7 +67,7 @@ $CI=&get_instance();
                     $id=$row->Flight_id;
                     echo '	
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12" >
-					<div class="tm-home-box-2">						
+					<div class="tm-home-box-2" style="width:250px; padding-left: 60px;padding-right: 40px;">						
 						<img src="'.base_url().'Assets/uploads/'.$data1=$CI->get_airline_image($row->Flight_airline).'" alt="'.$data1=$CI->get_airline_image($row->Flight_airline).'" alt="image" class="img-responsive" style="width: 100px;height: 100px">
 						<div class="info" >
 							<ul>
@@ -77,10 +77,11 @@ $CI=&get_instance();
 								<li> <i class="fa fa-clock-o"></i><p>'.$row->Flight_time.'</p></li>
 								<li> <i class="fa fa-euro"></i><p>'.number_format($row->Flight_price).' Rial </p> </li> 
 								<li> <i class="fa fa-road"></i><p>'.$data=$CI->explode_airline($row->Flight_airline).'</p></li>
-								<div class="tm-home-box-2-container">
+								
+							</ul>
+							<div class="tm-home-box-2-container" >
 								<p>Your Flight information</p>
 								</div>
-							</ul>
 						</div>
 							
 					</div>
@@ -94,8 +95,8 @@ $CI=&get_instance();
             ?>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12" style="width:300px">
-                <div class="tm-home-box-2 user_info">
-                    <img src="<?php echo base_url()?>Assets/image/Ticket_logo.png" alt="image" class="img-responsive" style="width: 150px;height: 150px">
+                <div class="tm-home-box-2 user_info" style="width:350px; padding-left: 30px;padding-right: 30px;">
+                    <img src="<?php echo base_url()?>Assets/image/Ticket_logo.png" alt="image" class="img-responsive" style="width: 250px;height: 150px; padding-left: 60px;">
                     <div class="info" style="width:300px">
                         <ul>
                             <p><?php echo form_error('reserve_username')?></p>
@@ -133,10 +134,13 @@ $CI=&get_instance();
                                 </select>
                                 
                             </li>
-                            <!-- <li><p>single price: </p> <p1><?=$Flight_price?>Rial</p1></li>
-	  						<li><p>Total price: </p><p1><?=$Flight_price * ($reserve_adultCount+$reserve_childCount)?>Rial</p1></li> -->
+							
+							 <!-- <li><p>single price: </p> <p><?=$Flight_price?>Rial</p></li> 
+	  						<li><p>Total price: </p><p1><?=$reserve_totalPrice?>Rial</p1></li>  -->
+											
+							
 	  						<div class="tm-home-box-2-container">
-                        <input type="submit" value="Final Reservation">
+                        <input type="submit" value="Reserve">
                     </div>
                         </ul>
                     </div>

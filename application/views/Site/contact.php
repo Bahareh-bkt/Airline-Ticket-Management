@@ -65,7 +65,7 @@
                 ?>
 					<div class="col-lg-6 col-md-6">
 						<div id="google-map"></div>
-                        <div dir="ltr" style="">
+                        <div dir="ltr">
                             <?php
                             if(isset($register_result)){
                                 echo '<p style="margin-top: 20px;font-size: 20px; color: #0c5460">'.$register_result.'</p>';

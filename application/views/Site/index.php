@@ -78,15 +78,15 @@ http://www.templatemo.com/tm-475-holiday
 	
 		<div class="section-margin-top">
 			
-			<div class="row" >
+			<div class="row" style="padding-left: 10px;">
                 <?php
                 $CI=&get_instance();
                 if(isset($fetch_data)){
                     foreach ($fetch_data->result() as $row){
                         echo form_open('Site/Reserve/'.$row->Flight_id);
                         echo'
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12" style="width:300px" >
-                                <div class="tm-home-box-2" background-color: #f1d227 style="width:300px">						
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12" style="width:300px;" >
+                                <div class="tm-home-box-2" background-color: #f1d227 style="width:250px; padding-left: 60px;padding-right: 40px;">						
                                     <img src="'.base_url().'Assets/uploads/'.$data1=$CI->get_airline_image($row->Flight_airline).'" alt="'.$data1=$CI->get_airline_image($row->Flight_airline).'" class="img-responsive" style="width: 100px;height: 100px">
                                     <div class="info">
                                         <ul>
@@ -97,8 +97,8 @@ http://www.templatemo.com/tm-475-holiday
                                             <li><i class="fa fa-euro"></i><p>'.number_format($row->Flight_price).'Rial </p> </li>                              
 
                                             <li><i class="fa fa-road"></i><p>'.$data=$CI->explode_airline($row->Flight_airline).'</p></li>
-                                            <div class="tm-home-box-2-container">
-                                        <input type="submit" value="Reserve">
+                                            <div class="tm-home-box-2-container" >
+                                        <input type="submit" value="Reserve" style="height:30px">
                                     </div>
                                         </ul>
                                     </div>

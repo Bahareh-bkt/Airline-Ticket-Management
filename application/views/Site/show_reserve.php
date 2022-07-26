@@ -92,7 +92,7 @@
 								<li><p>Age:</p><p style="color: #ba1318">'.$row->reserve_age.'</p></li>
 								<li><p>Adult: </p><p style="color: #ba1318">'.$row->reserve_adultCount.'</p></li>
 								<li><p>Children: </p><p style="color: #ba1318">'.$row->reserve_childCount.'</p></li>
-	                            <li><p>single price: </p><p style="color: #ba1318">'.number_format($row->reserve_singlePrice).'Rial</p></li>
+	                            <li><p>single price: </p><p style="color: #ba1318">'.number_format($row->Flight_price).'Rial</p></li>
 	  							<li><p>Total price: </p><p style="color: #ba1318">'.number_format($row->reserve_totalPrice).'Rial</p></li>
 	  							<li><p style="width: 150px;">Your reservation code:</p><p style="color: #ba1318">'.$row->reserve_Code.'</p></li>
 							</ul>

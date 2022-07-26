@@ -62,7 +62,7 @@
                                               <td> '.$row->reserve_age.'  </td>
                                               <td> '.$row->reserve_adultCount.' </td>
                                               <td> '.$row->reserve_childCount.' </td>
-                                              <td> '.number_format($row->reserve_singlePrice).' rial</td>
+                                              <td> '.number_format($row->Flight_price).' rial</td>
                                               <td> '.number_format($row->reserve_totalPrice).' rial</td>
                                               <td> '.$row->reserve_flightCode.' </td>
                                               <td> '.$row->reserve_Code.' </td>

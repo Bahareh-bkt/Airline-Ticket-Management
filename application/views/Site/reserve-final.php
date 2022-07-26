@@ -26,7 +26,6 @@
                     <nav class="tm-nav">
                         <ul>
                         	<li><a href="<?php echo base_url().'index.php/Site/index' ?>">Main Page</a></li>
-                            
                             <li><a href="<?php echo base_url().'index.php/Site/contactus' ?>">Contact us</a></li>
                             <li><a href="<?php echo base_url().'index.php/Site/aboutus' ?>">About us</a></li>
                             <li><a href="<?php echo base_url().'index.php/Site/searchTicket' ?>">Search</a></li>
@@ -64,7 +63,7 @@
 								<li> <i class="fa fa-plane"></i><p><?=$Flight_destination?></p></li>
 								<li> <i class="fa fa-calendar-check-o"></i><p><?=$Flight_date?></p></li>
 								<li> <i class="fa fa-clock-o"></i><p><?=$Flight_time?></p></li>
-                                <!-- <li> <i class="fa fa-euro"></i><p><?=$Flight_price?>Rial</p></li> --> 
+                                <li> <i class="fa fa-euro"></i><p><?=$Flight_price?>Rial</p></li> 
 								<li> <i class="fa fa-road"></i><p><?=$Flight_airline?></p></li>
 								<div class="tm-home-box-2-container">
 							<p>Your Flight Info</p>
@@ -79,8 +78,8 @@
                 echo form_open('Site/Register_Reserve/'.$this->uri->segment(3))
             ?>
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12" >
-					<div class="tm-home-box-2 user_info">						
-						<img src="<?php echo base_url()?>Assets/image/Ticket_logo.png" alt="image" class="img-responsive" style="width: 100px;height: 100px">
+					<div class="tm-home-box-2 user_info" style="width:350px; padding-left: 30px;padding-right: 30px;">						
+						<img src="<?php echo base_url()?>Assets/image/Ticket_logo.png" alt="image" class="img-responsive" style="width: 150px;height: 100px">
 						<div class="info" >
 							<ul>
 								<li><p>Your Name: </p><p1><?=$reserve_username?></p1></li>
@@ -93,12 +92,13 @@
 								<li><p>Children: </p> 
 									 <p1><?=$reserve_childCount?>person</p1>
 								</li>
-	  							 <!-- <li><p>single price: </p> <p1><?=$Flight_price?>Rial</p1></li>
-	  							<li><p>Total price: </p><p1><?=$Flight_price * ($reserve_adultCount+$reserve_childCount)?>Rial</p1></li>  -->
-	  							<div class="tm-home-box-2-container">
-							<input type="submit" value="Click to Finalise your Reservation">
-						</div>
+	  							<li><p>single price: </p><p1><?=$Flight_price?>Rial</p1></li>
+	  							<li><p>Total price: </p><p1><?=$reserve_totalPrice?>Rial</p1></li>  
+	  							
 							</ul>
+							<div class="tm-home-box-2-container">
+							<input type="submit" value="Click to complete your Reservation">
+						    </div>
 						</div>
 						
 					</div>
@@ -108,7 +108,6 @@
             ?>
 		</div>
 	
- 			<div>
 	</section>
 	<!-- white bg -->
 	<footer class="tm-black-bg">
@@ -120,13 +119,12 @@
 			</div>
 		</div>		
 	</footer>
-	<script type="text/javascript" src="<?php echo base_url()?>Assets/Site/js/jquery-1.11.2.min.js"></script>      		<!-- jQuery -->
-  	<script type="text/javascript" src="<?php echo base_url()?>Assets/Site/js/moment.js"></script>							<!-- moment.js -->
-	<script type="text/javascript" src="<?php echo base_url()?>Assets/Site/js/bootstrap.min.js"></script>					<!-- bootstrap js -->
-	<script type="text/javascript" src="<?php echo base_url()?>Assets/Site/js/bootstrap-datetimepicker.min.js"></script>	<!-- bootstrap date time picker js, http://eonasdan.github.io/bootstrap-datetimepicker/ -->
+	<script type="text/javascript" src="<?php echo base_url()?>Assets/Site/js/jquery-1.11.2.min.js"></script>      		
+  	<script type="text/javascript" src="<?php echo base_url()?>Assets/Site/js/moment.js"></script>							
+	<script type="text/javascript" src="<?php echo base_url()?>Assets/Site/js/bootstrap.min.js"></script>					
+	<script type="text/javascript" src="<?php echo base_url()?>Assets/Site/js/bootstrap-datetimepicker.min.js"></script>	
 	<script type="text/javascript" src="<?php echo base_url()?>Assets/Site/js/jquery.flexslider-min.js"></script>
-
-   	<script type="text/javascript" src="js/templatemo-script.js"></script>      		<!-- Templatemo Script -->
+   	<script type="text/javascript" src="js/templatemo-script.js"></script>      		
 	<script>
 		// HTML document is loaded. DOM is ready.
 		$(function() {

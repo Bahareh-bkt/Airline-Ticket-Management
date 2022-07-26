@@ -157,9 +157,9 @@ class Site extends CI_Controller {
              foreach($data_Flight['result_data']->result() as $row){
                  $data_Flight['Flight_origin']=$row->Flight_origin;
                  $data_Flight['Flight_destination']=$row->Flight_destination;
-                 // $data_Flight['Flight_Capacity']=$row->Flight_Capacity;
+                 $data_Flight['Flight_Capacity']=$row->Flight_Capacity;
                  $data_Flight['Flight_reserved_count']=$row->Flight_reserved_count;
-                 // $data_Flight['Flight_Price']=$row->Flight_Price;
+                 $data_Flight['Flight_price']=$row->Flight_price;
                  $data_Flight['Flight_date']=$row->Flight_date;
                  $data_Flight['Flight_time']=$row->Flight_time;
                  $data_Flight['Flight_airline']=$row->Flight_airline;
@@ -173,8 +173,9 @@ class Site extends CI_Controller {
             $data_Flight['reserve_age']=$_POST['reserve_age'];
             $data_Flight['reserve_adultCount']=$_POST['reserve_adultCount'];
             $data_Flight['reserve_childCount']=$_POST['reserve_childCount'];
-            // $data_Flight['Flight_Price']=$data_Flight['Flight_Price'];
-            // $data_Flight['Flight_Capacity']=$data_Flight['Flight_Capacity'];
+            $data_Flight['Flight_price']=$data_Flight['Flight_price'];
+            $data_Flight['Flight_Capacity']=$data_Flight['Flight_Capacity'];
+            $data_Flight['reserve_totalPrice']=$data_Flight['Flight_price']* ($data_Flight['reserve_adultCount']+ $data_Flight['reserve_childCount']);
 
             $array_user=array(
                 'reserve_username'=>$data_Flight['reserve_username'],
@@ -183,6 +184,8 @@ class Site extends CI_Controller {
                 'reserve_age'=>$data_Flight['reserve_age'],
                 'reserve_adultCount'=>$data_Flight['reserve_adultCount'],
                 'reserve_childCount'=>$data_Flight['reserve_childCount'],
+                'Flight_price'=>$data_Flight['Flight_price'],
+                'reserve_totalPrice'=>$data_Flight['Flight_price']* ($data_Flight['reserve_adultCount']+ $data_Flight['reserve_childCount']),
 
             );
             $this->session->set_userdata($array_user);
@@ -196,7 +199,7 @@ class Site extends CI_Controller {
             $data_Flight['Flight_origin']=$row->Flight_origin;
             $data_Flight['Flight_destination']=$row->Flight_destination;
             $data_Flight['Flight_capacity']=$row->Flight_capacity;
-            $data_Flight['Flight_reserved_count']=$row->Flight_reserved_count;
+            $data_Flight['Flight_reserved_count']=$row->Flight_reserved_count ;
             $data_Flight['Flight_price']=$row->Flight_price;
             $data_Flight['Flight_date']=$row->Flight_date;
             $data_Flight['Flight_time']=$row->Flight_time;
@@ -215,7 +218,7 @@ class Site extends CI_Controller {
                 $data_reserve['reserve_age']=$this->session->userdata('reserve_age');
                 $data_reserve['reserve_adultCount']=$this->session->userdata('reserve_adultCount');
                 $data_reserve['reserve_childCount']=$this->session->userdata('reserve_childCount');
-                $data_reserve['reserve_singlePrice']=$data_Flight['Flight_price'];
+                $data_reserve['Flight_price']=$data_Flight['Flight_price'];
                 $data_reserve['reserve_totalPrice']=($data_Flight['Flight_price'] * ($data_reserve['reserve_childCount'] + $data_reserve['reserve_adultCount'])) ;
                 $data_reserve['reserve_FlightCode']=$data_Flight['Flight_code'];
                 $data_reserve['reserve_Code']=mt_rand();
@@ -276,8 +279,6 @@ class Site extends CI_Controller {
 
         redirect (base_url().'index.php/Site/Show_Reserve/'.$_POST['ReserveCode'].'/'.$_POST['nationalCode']);
         }}
-
-
 
 
     function Get_All_Reserve(){

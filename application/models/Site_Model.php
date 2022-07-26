@@ -26,13 +26,7 @@ class Site_Model extends CI_Model{
         $retrieve =$this->db->get('Flight');
         return $retrieve ;
     }
-    public function Get_All_Kish($limit,$start){
-        $this->db->limit($limit,$start);
-        $this->db->where('Flight_destination','Kish');
-        $this->db->where('Flight_state','0');
-        $retrieve =$this->db->get('Flight');
-        return $retrieve ;
-    }
+    
     public function Update_FlightReservedCount($Code,$NCount){
         $this->db->where('Flight_code',$Code);
         $retrieve=$this->db->update('Flight',array('Flight_reserved_count'=>$NCount+1));
