@@ -3,6 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width= device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
 <title>Airline Ticket Management System</title>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>Assets/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>Assets/bootstrap/css/bootstrap-ltr.css">
@@ -25,7 +30,8 @@
                     </ul>	
                 </div>
                 <div class="body" style="background-color:#f8c37d;height:600px; padding-left: 70px; padding-top: 100px;" dir="ltr">
-                      	<ul>
+                <div class="col-xs-1 col-md-12 col-lg-12">	
+                <ul>
 
                          <li>
                             <div class="box" style="width:300px; height:300px;border-width: 15px;border-color:#ff6c00 ; border-radius:10%; padding-top: 30px; padding-right: 30px; padding-left: 30px;background-color:#fad7a9">
@@ -90,6 +96,7 @@
                     </ul>
                 </div>
             </div>
+            </div> 
         </div>
         <div class="row">
         	<div class="bottom navbar-fixed-bottom" style="background-color:#ff6c00">
@@ -101,5 +108,10 @@
 <script src="<?php echo base_url() ?>Assets/bootstrap/js/jquery-1.12.3.min.js"></script>
 <script src="<?php echo base_url() ?>Assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="<?php echo base_url() ?>Assets/js/js.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>

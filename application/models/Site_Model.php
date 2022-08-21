@@ -11,13 +11,6 @@ class Site_Model extends CI_Model{
         $retrieve =$this->db->get('Flight');
         return $retrieve ;
     }
-    public function Get_All_Mashhad($limit,$start){
-        $this->db->limit($limit,$start);
-        $this->db->where('Flight_destination','Mashhad');
-        $this->db->where('Flight_state','0');
-        $retrieve =$this->db->get('Flight');
-        return $retrieve ;
-    }
     public function Get_All_Search($limit,$start,$destination,$date){
         $this->db->limit($limit,$start);
         $this->db->where('Flight_destination',$destination);

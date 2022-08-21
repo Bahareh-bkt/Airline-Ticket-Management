@@ -87,7 +87,8 @@ http://www.templatemo.com/tm-475-holiday
                         echo'
                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12" style="width:300px;" >
                                 <div class="tm-home-box-2" background-color: #f1d227 style="width:250px; padding-left: 60px;padding-right: 40px;">						
-                                    <img src="'.base_url().'Assets/uploads/'.$data1=$CI->get_airline_image($row->Flight_airline).'" alt="'.$data1=$CI->get_airline_image($row->Flight_airline).'" class="img-responsive" style="width: 100px;height: 100px">
+                                    <img src="'.base_url().'Assets/uploads/'.$data1=$CI->get_airline_image($row->Flight_airline).'" 
+									class="img-responsive" style="width: 100px;height: 100px">
                                     <div class="info">
                                         <ul>
                                             <li><i class="fa fa-map-marker "></i><p>'.$row->Flight_origin.' </p></li>
@@ -98,11 +99,10 @@ http://www.templatemo.com/tm-475-holiday
 
                                             <li><i class="fa fa-road"></i><p>'.$data=$CI->explode_airline($row->Flight_airline).'</p></li>
                                             <div class="tm-home-box-2-container" >
-                                        <input type="submit" value="Reserve" style="height:30px">
-                                    </div>
+                                        	<input type="submit" value="Reserve" style="height:30px">
+                                    		</div>
                                         </ul>
-                                    </div>
-                                    
+                                    </div> 
                                 </div>
                             </div>
                             ';

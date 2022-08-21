@@ -90,13 +90,13 @@ $CI=&get_instance();
                 }
             }
             ?>
-            <?php
-            echo form_open('Site/Reserve_Final/'.$id);
-            ?>
+			
+			<?php echo form_open('Site/Reserve_Final/'.$id); ?>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12" style="width:300px">
                 <div class="tm-home-box-2 user_info" style="width:350px; padding-left: 30px;padding-right: 30px;">
-                    <img src="<?php echo base_url()?>Assets/image/Ticket_logo.png" alt="image" class="img-responsive" style="width: 250px;height: 150px; padding-left: 60px;">
+                    <img src="<?php echo base_url()?>Assets/image/Ticket_logo.png" alt="image" class="img-responsive" 
+					style="width: 250px;height: 150px; padding-left: 60px;">
                     <div class="info" style="width:300px">
                         <ul>
                             <p><?php echo form_error('reserve_username')?></p>
@@ -120,8 +120,7 @@ $CI=&get_instance();
 									<option value="8"> 8 </option>
 									<option value="9"> 9 </option>
 									<option value="10"> 10 </option>
-                                </select>
-                                
+                                </select>                               
                             </li>
                             <li>
                             	<p>Children: </p>
@@ -131,14 +130,8 @@ $CI=&get_instance();
                                     <option value="2"> 2 </option>
                                     <option value="3"> 3 </option>
                                     <option value="4"> 4 </option>
-                                </select>
-                                
-                            </li>
-							
-							 <!-- <li><p>single price: </p> <p><?=$Flight_price?>Rial</p></li> 
-	  						<li><p>Total price: </p><p1><?=$reserve_totalPrice?>Rial</p1></li>  -->
-											
-							
+                                </select>                               
+                            </li>	
 	  						<div class="tm-home-box-2-container">
                         <input type="submit" value="Reserve">
                     </div>
@@ -147,9 +140,7 @@ $CI=&get_instance();
                     
                 </div>
             </div>
-            <?php
-                echo form_close();
-            ?>
+            <?php echo form_close(); ?>
         </div>
 	</div>
 	</section>

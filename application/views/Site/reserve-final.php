@@ -17,7 +17,7 @@
   		<div class="container">
   			<div class="row">
   				<div class="col-lg-6 col-md-4 col-sm-3 tm-site-name-container">
-                    <a href="<?php echo base_url().'Site/index' ?>" class="tm-site-name">Bahar Reservation</a>
+                    <a href="<?php echo base_url().'Site/index' ?>" class="tm-site-name">Ticket Reservation</a>
   				</div>
 	  			<div class="col-lg-6 col-md-8 col-sm-9" dir="ltr">
 	  				<div class="mobile-menu-icon">
@@ -74,12 +74,11 @@
 					</div>
 				</div>
 
-            <?php
-                echo form_open('Site/Register_Reserve/'.$this->uri->segment(3))
-            ?>
+            <?php echo form_open('Site/Register_Reserve/'.$this->uri->segment(3)) ?>
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12" >
 					<div class="tm-home-box-2 user_info" style="width:350px; padding-left: 30px;padding-right: 30px;">						
-						<img src="<?php echo base_url()?>Assets/image/Ticket_logo.png" alt="image" class="img-responsive" style="width: 150px;height: 100px">
+						<img src="<?php echo base_url()?>Assets/image/Ticket_logo.png" alt="image" class="img-responsive" 
+						style="width: 150px;height: 100px">
 						<div class="info" >
 							<ul>
 								<li><p>Your Name: </p><p1><?=$reserve_username?></p1></li>
@@ -94,18 +93,14 @@
 								</li>
 	  							<li><p>single price: </p><p1><?=$Flight_price?>Rial</p1></li>
 	  							<li><p>Total price: </p><p1><?=$reserve_totalPrice?>Rial</p1></li>  
-	  							
 							</ul>
 							<div class="tm-home-box-2-container">
 							<input type="submit" value="Click to complete your Reservation">
 						    </div>
-						</div>
-						
+						</div>	
 					</div>
 				</div>
-				<?php
-                echo form_close();
-            ?>
+				<?php  echo form_close(); ?>
 		</div>
 	
 	</section>

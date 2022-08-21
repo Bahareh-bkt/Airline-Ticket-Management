@@ -23,48 +23,6 @@ class Site extends CI_Controller {
         $data['pagination']=$this->pagination->create_links();
         $this->load->view('Site/index',$data);
     }
-    // function explode_date($date){
-    //     $data=explode('/',$date);
-    //     switch ($data[1]){
-    //         case "1":
-    //             $month="January";
-    //             break;
-    //         case "2":
-    //             $month="February";
-    //             break;
-    //         case "3":
-    //             $month="March";
-    //             break;
-    //         case "4":
-    //             $month="April";
-    //             break;
-    //         case "5":
-    //             $month="May";
-    //             break;
-    //         case "6":
-    //             $month="June";
-    //             break;
-    //         case "7":
-    //             $month="July";
-    //             break;
-    //         case "8":
-    //             $month="August";
-    //             break;
-    //         case "9":
-    //             $month="September";
-    //             break;
-    //         case "10":
-    //             $month="October";
-    //             break;
-    //         case "11":
-    //             $month="November";
-    //             break;
-    //         case "12":
-    //             $month="December";
-    //             break;
-    //     }
-    //     return $data[2]." ".$month." ".$data[0];
-    // }
     function explode_airline($data){
         $data=explode('/',$data);
         return $data[0];
@@ -91,7 +49,8 @@ class Site extends CI_Controller {
         $config['uri_segment']=4;
         $page=($this->uri->segment(4))?$this->uri->segment(4):0;
         $this->pagination->initialize($config);
-        $data['fetch_data']=$this->Site_Model->Get_All_Search($config['per_page'],$page,$this->session->userdata('Flight_destination_search'),$this->session->userdata('Flight_date_search'));
+        $data['fetch_data']=$this->Site_Model->Get_All_Search($config['per_page'],$page,
+        $this->session->userdata('Flight_destination_search'),$this->session->userdata('Flight_date_search'));
         $data['pagination']=$this->pagination->create_links();
         $this->load->view('Site/index',$data);
         
@@ -150,7 +109,6 @@ class Site extends CI_Controller {
         $this->form_validation->set_rules($form_validation);
         if($this->form_validation->run()==false){
             $this->Reserve();
-            // $this->load->view('Site/index');
         }else{
              $ID=$this->uri->segment(3);
              $data_Flight=$this->Get_Single($ID);
@@ -175,8 +133,8 @@ class Site extends CI_Controller {
             $data_Flight['reserve_childCount']=$_POST['reserve_childCount'];
             $data_Flight['Flight_price']=$data_Flight['Flight_price'];
             $data_Flight['Flight_Capacity']=$data_Flight['Flight_Capacity'];
-            $data_Flight['reserve_totalPrice']=$data_Flight['Flight_price']* ($data_Flight['reserve_adultCount']+ $data_Flight['reserve_childCount']);
-
+            $data_Flight['reserve_totalPrice']=$data_Flight['Flight_price']* 
+            ($data_Flight['reserve_adultCount']+ $data_Flight['reserve_childCount']);
             $array_user=array(
                 'reserve_username'=>$data_Flight['reserve_username'],
                 'reserve_nationalCode'=>$data_Flight['reserve_nationalCode'],
@@ -185,8 +143,8 @@ class Site extends CI_Controller {
                 'reserve_adultCount'=>$data_Flight['reserve_adultCount'],
                 'reserve_childCount'=>$data_Flight['reserve_childCount'],
                 'Flight_price'=>$data_Flight['Flight_price'],
-                'reserve_totalPrice'=>$data_Flight['Flight_price']* ($data_Flight['reserve_adultCount']+ $data_Flight['reserve_childCount']),
-
+                'reserve_totalPrice'=>$data_Flight['Flight_price']* 
+                ($data_Flight['reserve_adultCount']+ $data_Flight['reserve_childCount']),
             );
             $this->session->set_userdata($array_user);
              $this->load->view('Site/reserve-final',$data_Flight);
@@ -207,7 +165,8 @@ class Site extends CI_Controller {
             $data_Flight['Flight_code']=$row->Flight_code;
         }
         if($data_Flight['Flight_reserved_count'] < $data_Flight['Flight_capacity']){
-            $retrieve=$this->Site_Model->Update_FlightReservedCount($data_Flight['Flight_code'],$data_Flight['Flight_reserved_count']);
+            $retrieve=$this->Site_Model->Update_FlightReservedCount($data_Flight['Flight_code'],
+            $data_Flight['Flight_reserved_count']);
              if($retrieve){
                 if($data_Flight['Flight_capacity']==$data_Flight['Flight_reserved_count']+1){
                     $this->Site_Model->Update_FlightState($data_Flight['Flight_code']);
@@ -219,14 +178,14 @@ class Site extends CI_Controller {
                 $data_reserve['reserve_adultCount']=$this->session->userdata('reserve_adultCount');
                 $data_reserve['reserve_childCount']=$this->session->userdata('reserve_childCount');
                 $data_reserve['Flight_price']=$data_Flight['Flight_price'];
-                $data_reserve['reserve_totalPrice']=($data_Flight['Flight_price'] * ($data_reserve['reserve_childCount'] + $data_reserve['reserve_adultCount'])) ;
+                $data_reserve['reserve_totalPrice']=($data_Flight['Flight_price'] * 
+                ($data_reserve['reserve_childCount'] + $data_reserve['reserve_adultCount'])) ;
                 $data_reserve['reserve_FlightCode']=$data_Flight['Flight_code'];
                 $data_reserve['reserve_Code']=mt_rand();
-                 // $this->load->view('Site/show_reserve,$data_reserve');
                 $retrieve=$this->Site_Model->Reserve_Register($data_reserve);
                 if($retrieve){
-
-                    redirect(base_url().'index.php/Site/Show_Reserve/'.$data_reserve['reserve_Code'].'/'.$data_reserve['reserve_nationalCode']);
+                    redirect(base_url().'index.php/Site/Show_Reserve/'.$data_reserve['reserve_Code'].
+                    '/'.$data_reserve['reserve_nationalCode']);
                 }else{
                     redirect(base_url().'Site/Show_Reserve/NOtReserve');
                 }
@@ -273,7 +232,6 @@ class Site extends CI_Controller {
         );
         $this->form_validation->set_rules($form_validation);
         if($this->form_validation->run()==false){
-            //$this->Follow_up();
             $this->load->view('Site/search');
         }else{
 

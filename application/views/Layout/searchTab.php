@@ -23,10 +23,14 @@
                                 <div class="tm-form-inner">
                                     <div class="form-group">
                                         <div class='input-group date-time' id='datetimepicker3'>
-                                            <input type='text' class="form-control" name="nationalCode" placeholder="Natinal Code" style="margin-bottom:10px; margin-right: 30px;border:solid 1px #000000; direction:ltr; background-color: #ffffff; box-shadow:none; width: 220px;"/>
+                                            <input type='text' class="form-control" name="nationalCode" placeholder="Natinal Code" 
+                                            style="margin-bottom:10px; margin-right: 30px;border:solid 1px #000000; direction:ltr; 
+                                            background-color: #ffffff; box-shadow:none; width: 220px;"/>
                                         </div>
                                         <div class='input-group date-time' id='datetimepicker3'>
-                                            <input type='text' class="form-control" name="ReserveCode" placeholder="Reserve Code" style="margin-bottom:10px; margin-right: 30px; border: 1px solid #000000; direction:ltr; background-color: #ffffff; box-shadow:none; width: 220px;"/>
+                                            <input type='text' class="form-control" name="ReserveCode" placeholder="Reserve Code" 
+                                            style="margin-bottom:10px; margin-right: 30px; border: 1px solid #000000; direction:ltr; 
+                                            background-color: #ffffff; box-shadow:none; width: 220px;"/>
                                         </div>
                                     </div>
                                 </div>
@@ -41,9 +45,7 @@
                     ?>
                     <div role="tabpanel" class="tab-pane fade tm-white-bg" id="car">
                         <div class="tm-search-box effect2">
-                            <?php
-                            echo form_open('Site/Search');
-                            ?>
+                            <?php echo form_open('Site/Search'); ?>
                             <div class="tm-form-inner" dir="ltr">
                                 <div class="form-group">
                                     <select class="form-control" name="Flight_destination">
@@ -76,9 +78,7 @@
                             <div class="form-group tm-yellow-gradient-bg text-center">
                                 <button type="submit" class="tm-yellow-btn">Search</button>
                             </div>
-                            <?php
-                            echo form_close();
-                            ?>
+                            <?php echo form_close(); ?>
                         </div>
                     </div>
                 </div>
